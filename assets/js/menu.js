@@ -1,5 +1,5 @@
-// Prices are integer cents. The original menu and prices are preserved.
-export const categories = ['All', 'Drinks', 'Pizza', 'Burgers', 'Pasta', 'Desserts', 'Wine', 'Beer', 'Seafood', 'Salads', 'Sandwiches', 'Steaks', 'Asian Cuisine', 'Mexican', 'Indian', 'Breakfast', 'Vegan'];
+// Prices are integer cents.
+export const categories = ['All', 'Drinks', 'Pizza', 'Burgers', 'Pasta', 'Desserts', 'Seafood', 'Salads', 'Sandwiches', 'Steaks', 'Asian Cuisine', 'Mexican', 'Indian', 'Breakfast', 'Vegan'];
 
 export const menu = [
   { id: 'margherita', name: 'Margherita Pizza', category: 'Pizza', group: 'Kitchen favourites', priceCents: 799, calories: 800, image: 'pizza', description: 'Tomato, creamy mozzarella and fresh basil. A classic for a reason.', featured: true },
@@ -18,11 +18,7 @@ export const menu = [
   { id: 'red-velvet', name: 'Red Velvet Cake', category: 'Desserts', group: 'Something sweet', priceCents: 400, calories: 400, image: 'red-velvet', description: 'Soft red velvet layers and a generous swirl of cream cheese frosting.' },
   { id: 'coke', name: 'Coke', category: 'Drinks', group: 'Drinks', priceCents: 199, calories: 140, image: 'cola', description: 'The refreshing original, served chilled and ready to enjoy.' },
   { id: 'pepsi', name: 'Pepsi', category: 'Drinks', group: 'Drinks', priceCents: 250, calories: 150, image: 'pepsi', description: 'Bold, refreshing cola. Best enjoyed ice cold.' },
-  { id: 'lemonade', name: 'Lemonade', category: 'Drinks', group: 'Drinks', priceCents: 300, calories: 120, image: 'lemonade', description: 'Fresh lemons, a touch of sweetness and a wonderfully bright finish.' },
-  { id: 'red-wine', name: 'Red Wine', category: 'Wine', group: 'Drinks', priceCents: 1299, calories: 125, image: 'wine', description: 'A smooth, full-flavoured red with a soft and lingering finish.' },
-  { id: 'white-wine', name: 'White Wine', category: 'Wine', group: 'Drinks', priceCents: 1450, calories: 120, image: 'white-wine', description: 'Crisp and fruity, with a refreshing finish. Served chilled.' },
-  { id: 'beer', name: 'Beer', category: 'Beer', group: 'Drinks', priceCents: 450, calories: 150, image: 'beer', description: 'Light, crisp and chilled. A refreshing companion to your meal.' },
-  { id: 'stout', name: 'Stout', category: 'Beer', group: 'Drinks', priceCents: 600, calories: 210, image: 'stout', description: 'Rich roasted notes and a smooth, creamy head.' }
+  { id: 'lemonade', name: 'Lemonade', category: 'Drinks', group: 'Drinks', priceCents: 300, calories: 120, image: 'lemonade', description: 'Fresh lemons, a touch of sweetness and a wonderfully bright finish.' }
 ];
 
 export const menuById = new Map(menu.map(item => [item.id, item]));

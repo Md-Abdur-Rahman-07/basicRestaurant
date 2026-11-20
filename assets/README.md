@@ -25,10 +25,6 @@ Unsplash photographs are available under the [Unsplash License](https://unsplash
 | `cola.webp` | [Unsplash original](https://images.unsplash.com/photo-1622483767028-3f66f32aef97) |
 | `pepsi.webp` | [Pepsi can — Martin Péchy, Pexels](https://www.pexels.com/photo/person-holding-pepsi-can-1292294/) |
 | `lemonade.webp` | [Lemonade — Denys Gromov, Pexels](https://www.pexels.com/photo/glass-of-lemonade-18142613/) |
-| `beer.webp` | [Unsplash original](https://images.unsplash.com/photo-1608270586620-248524c67de9) |
-| `stout.webp` | [Stout — Steve Cancel, Unsplash](https://unsplash.com/photos/a-glass-of-beer-3SuqeXvMXJg) |
-| `wine.webp` | [Unsplash original](https://images.unsplash.com/photo-1510812431401-41d2bd2722f3) |
-| `white-wine.webp` | [White wine — Valeria Boltneva, Pexels](https://www.pexels.com/photo/glass-of-white-wine-20184720/) |
 | `ice-cream.webp` | [Unsplash original](https://images.unsplash.com/photo-1563805042-7684c019e1cb) |
 | `red-velvet.webp` | [Unsplash original](https://images.unsplash.com/photo-1586788680434-30d324b2d46f) |
 | `sandwich.webp` | [Unsplash original](https://images.unsplash.com/photo-1528735602780-2552fd46c7af) |

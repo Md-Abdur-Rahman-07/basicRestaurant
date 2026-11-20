@@ -6,7 +6,7 @@ A responsive restaurant menu and table-ordering demo built with plain HTML, CSS 
 
 ## Features
 
-- 21 menu items with food photography, descriptions, dietary tags and prices.
+- 17 menu items with food photography, descriptions, dietary tags and prices.
 - Scrollable categories, search, Vegan/Spicy filters and price sorting.
 - Editable cart with synchronized quantities and a sticky order summary.
 - Optional tips, checkout confirmation and order history saved in local storage.

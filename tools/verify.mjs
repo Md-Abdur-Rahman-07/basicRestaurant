@@ -80,8 +80,8 @@ try {
   await check('Search, all categories, dietary combinations, empty-state reset and numeric price sorting', async () => {
     const { context, page, errors } = await pageWith();
     try {
-      assert.equal(await page.locator('.menu-card').count(), 21);
-      assert.equal(await page.locator('#categories button').count(), 17);
+      assert.equal(await page.locator('.menu-card').count(), 17);
+      assert.equal(await page.locator('#categories button').count(), 15);
       for (const category of ['Pizza', 'Drinks', 'Vegan', 'Asian Cuisine', 'All']) {
         await page.locator('#categories').getByRole('button', { name: category, exact: true }).click();
         assert.ok(await page.locator('.menu-card').count() > 0, category);
@@ -92,7 +92,7 @@ try {
       await page.locator('#search').fill('no-such-menu-item');
       assert.equal(await page.locator('#empty-results').isVisible(), true);
       await page.locator('#clear-search').click();
-      assert.equal(await page.locator('.menu-card').count(), 21);
+      assert.equal(await page.locator('.menu-card').count(), 17);
       await page.locator('#vegan-filter').click();
       assert.equal(await page.locator('.menu-card').count(), 2);
       await page.locator('#spicy-filter').click();
@@ -192,7 +192,7 @@ try {
         : () => localStorage.setItem('table-thirteen:order:v1', '{invalid-json');
       const { context, page, errors } = await pageWith({}, init);
       try {
-        assert.equal(await page.locator('.menu-card').count(), 21);
+        assert.equal(await page.locator('.menu-card').count(), 17);
         assert.equal(await page.locator('#cart-count').textContent(), '0');
         await page.getByRole('button', { name: 'Add Margherita Pizza to order', exact: true }).click();
         assert.equal(await page.locator('#cart-count').textContent(), '1');
