@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Settle in at Table Thirteen. Explore freshly prepared favourites, build your order, and enjoy good food and great company. Designed and developed by OrbitWick.">
+  <meta name="theme-color" content="#173f35">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Table Thirteen — Good food. Great company.">
+  <meta property="og:description" content="A little pause. A lot of flavour. Discover the menu and make yourself at home at Table Thirteen.">
+  <meta property="og:url" content="https://md-abdur-rahman-07.github.io/basicRestaurantTemplate/">
+  <meta property="og:image" content="https://md-abdur-rahman-07.github.io/basicRestaurantTemplate/assets/img/menu/social-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://md-abdur-rahman-07.github.io/basicRestaurantTemplate/">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preload" href="assets/fonts/DMSerifDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/DMSans-Latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/design-system.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Table Thirteen — Menu & Table Ordering</title>
+  <script>try{const t=localStorage.getItem('table-thirteen:theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch{}</script>
+  <script type="module" src="assets/js/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to menu</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="Table Thirteen home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M10 11v10m4-10v10m-8-10v10a4 4 0 0 0 8 0M10 25v8M28 11c-7 0-7 16 0 16V11Zm0 16v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M19 8v24" stroke="currentColor" stroke-opacity=".35"/></svg></span>
+        <span><span class="brand-name">table thirteen<span class="brand-period">.</span></span><span class="brand-caption">A PLACE AT THE TABLE</span></span>
+      </a>
+      <span class="table-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16M6 9V5h12v4M6 9v10m12-10v10M6 15h12"/></svg>Table <strong>13</strong></span>
+      <nav class="header-actions" aria-label="Table service">
+        <button class="header-button" id="call-service" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15a7 7 0 0 1 14 0M3 18h18M12 6V4m-2 0h4"/></svg><span>Call service</span></button>
+        <button class="header-button" id="open-history" type="button" aria-haspopup="dialog" aria-controls="order-dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 1 1 .8 6M4 5v5h5m3-4v6l4 2"/></svg><span>Order history</span></button>
+        <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a8 8 0 0 1-10-10 8 8 0 1 0 10 10Z"/></svg></button>
+        <button class="cart-button" id="open-cart" type="button" aria-haspopup="dialog" aria-controls="order-dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l1 13H4L5 7Zm4 0V5a3 3 0 0 1 6 0v2"/></svg><span>My order</span><span class="cart-count" id="cart-count" aria-live="polite" aria-atomic="true">0</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="small-rule"></span> FRESH FROM OUR KITCHEN</p>
+        <h1 id="hero-title">Good food.<br><em>Great company.</em></h1>
+        <p class="hero-description">Pull up a chair. Find a new favourite. <br>We’ll take care of the delicious part.</p>
+        <div class="hero-details"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4C9 3 3 8 6 15c7 4 14-2 13-11ZM5 20l10-10M5 8H3m2-5L4 2"/></svg>Freshly prepared</span><span class="detail-divider"></span><span>Made to order. Made for you.</span></div>
+      </div>
+      <div class="hero-visual">
+        <img class="hero-image" src="assets/img/menu/hero-pizza.webp" srcset="assets/img/menu/hero-pizza-small.webp 768w, assets/img/menu/hero-pizza.webp 1200w" sizes="(max-width: 540px) calc(100vw - 40px), (max-width: 1376px) calc((100vw - 64px) / 2), 640px" alt="Freshly baked Margherita pizza with basil and melted mozzarella" width="1200" height="800" fetchpriority="high">
+        <div class="hero-image-shade"></div>
+        <span class="kitchen-stamp" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m16 3 3 8 9 1-7 6 2 9-7-5-7 5 2-9-7-6 9-1Z"/></svg>THE HOUSE<br>FAVOURITE</span>
+        <div class="hero-caption"><span><span class="hero-caption-kicker">A LITTLE TASTE OF WHAT’S TO COME</span><strong>Margherita, made with love.</strong></span><span class="hero-price">$7.99</span></div>
+      </div>
+    </section>
+
+    <section class="menu-section" aria-labelledby="menu-title">
+      <div class="menu-heading">
+        <div><p class="eyebrow">SOMETHING FOR EVERY CRAVING</p><h2 id="menu-title">What sounds good?</h2></div>
+        <p class="menu-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3m-7 6H2m20 0h-3M5 5l2 2m12-2-2 2M5 19l2-2m12 2-2-2M8 12a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z"/></svg>A little of everything. All made fresh.</p>
+      </div>
+      <div class="category-wrap"><nav class="category-bar" id="categories" aria-label="Menu categories"><button class="category-chip active" type="button" aria-pressed="true">All</button></nav></div>
+      <div class="menu-toolbar">
+        <label class="search-field" for="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Find your next favourite…" autocomplete="off" maxlength="120"><span class="sr-only">Search menu by name or ingredient</span></label>
+        <div class="quick-filters" role="group" aria-label="Dietary filters">
+          <button class="filter-button" id="vegan-filter" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4C9 3 3 8 6 15c7 4 14-2 13-11ZM5 20l10-10"/></svg>Vegan</button>
+          <button class="filter-button" id="spicy-filter" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8c0-3 2-4 4-4M17 8c-4-4-6 0-6 4s-3 6-8 6c6 5 15 1 16-6 0-2-1-3-2-4Z"/></svg>Spicy</button>
+        </div>
+        <label class="sort-field" for="price-sort"><span class="sr-only">Sort menu</span><select id="price-sort"><option value="recommended">Recommended</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option></select><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 10 4 4 4-4"/></svg></label>
+      </div>
+      <div class="results-meta"><p id="result-count" aria-live="polite" aria-atomic="true">Preparing the menu…</p><button id="reset-filters" class="text-button" type="button" hidden>Clear filters</button></div>
+      <div id="menu-loading" class="skeleton-grid" role="status" aria-label="Loading the menu"><div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div></div>
+      <div id="menu-results"></div>
+      <div id="empty-results" class="empty-state" hidden><span class="empty-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></span><h3>No bites found. Yet.</h3><p>Try another search or clear your filters.<br>There’s something delicious waiting for you.</p><button class="primary-button" id="clear-search" type="button">Explore the whole menu</button></div>
+      <div id="menu-error" class="empty-state" role="alert" hidden><h3>The menu needs a moment.</h3><p>Refresh the page to try again.</p><button class="primary-button" type="button" onclick="location.reload()">Reload menu</button></div>
+      <noscript><div class="empty-state"><h3>A little help from JavaScript.</h3><p>Enable JavaScript to explore the menu and build your order.</p></div></noscript>
+    </section>
+
+    <aside class="allergy-note"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></svg><p>A little heads-up: have a food allergy? Please let your server know before ordering.</p></aside>
+  </main>
+
+  <footer class="site-footer page-shell">
+    <div class="footer-top"><a class="footer-wordmark" href="./">table thirteen.</a><span>Good food brings people together.</span></div>
+    <div class="footer-bottom"><p class="credit">Design and developed by <a href="https://orbitwick.com" target="_blank" rel="noopener noreferrer">OrbitWick</a></p><p class="demo-note">A restaurant ordering demo <span aria-hidden="true">·</span> Enjoy the experience</p></div>
+  </footer>
+
+  <aside class="order-summary" aria-label="Current order summary">
+    <div class="summary-inner"><div class="summary-label"><span class="summary-bag" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7h14l1 13H4L5 7Zm4 0V5a3 3 0 0 1 6 0v2"/></svg></span><div><strong>Your table. Your favourites.</strong><p id="summary-status">Something delicious starts here.</p></div></div><div class="summary-order"><div class="summary-totals"><span id="summary-count">0 items</span><strong id="summary-total">$0.00</strong></div><button class="primary-button summary-button" id="summary-cart" type="button" aria-haspopup="dialog" aria-controls="order-dialog">View order<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l1 13H4L5 7Zm4 0V5a3 3 0 0 1 6 0v2"/></svg></button></div></div>
+  </aside>
+
+  <dialog id="order-dialog" class="order-dialog" aria-labelledby="dialog-title">
+    <div class="drawer-header"><div><p class="eyebrow" id="dialog-eyebrow">SOMETHING GOOD IS COMING</p><h2 id="dialog-title">Your order</h2></div><button class="icon-button" id="close-dialog" type="button" aria-label="Close panel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div>
+    <div id="dialog-content" class="drawer-body"></div><div id="dialog-footer" class="drawer-footer"></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"><span class="toast-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><span id="toast-message"></span></div>
+</body>
+</html>

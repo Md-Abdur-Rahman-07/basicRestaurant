@@ -1,0 +1,240 @@
+/* Fonts, palette, spacing, and accessible document defaults. */
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../fonts/DMSans-Latin.woff2') format('woff2');
+  font-weight: 100 1000;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Serif Display';
+  src: url('../fonts/DMSerifDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --bg: #f9faf7;
+  --surface: #fff;
+  --surface-soft: #f0f3ed;
+  --ink: #202c28;
+  --muted: #626c65;
+  --accent: #173f35;
+  --accent-hover: #245c4c;
+  --accent-soft: #e9f0e9;
+  --on-accent: #fff;
+  --line: #e2e6df;
+  --tag: #40623c;
+  --tag-bg: #edf3e7;
+  --spicy: #a13c27;
+  --spicy-bg: #fbede7;
+  --hero: #edf0e8;
+  --shadow: 0 4px 10px #1a382505,0 12px 32px #1a38250a;
+  --drawer-shadow: -10px 0 70px #0c211526;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --radius: 16px;
+  --font: 'DM Sans',Arial,sans-serif;
+  --display: 'DM Serif Display',Georgia,serif;
+}
+
+:root[data-theme=dark] {
+  color-scheme: dark;
+  --bg: #131b17;
+  --surface: #1c2620;
+  --surface-soft: #243029;
+  --ink: #eef2eb;
+  --muted: #b0bbaf;
+  --accent: #c7dfb8;
+  --accent-hover: #d9edce;
+  --accent-soft: #2c3d2e;
+  --on-accent: #19271b;
+  --line: #354236;
+  --tag: #c3dcae;
+  --tag-bg: #2e3d27;
+  --spicy: #ffc1a5;
+  --spicy-bg: #4b3025;
+  --hero: #222d22;
+  --shadow: 0 4px 10px #0001,0 12px 32px #0002;
+  --drawer-shadow: -10px 0 70px #0005;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]) {
+    color-scheme: dark;
+    --bg: #131b17;
+    --surface: #1c2620;
+    --surface-soft: #243029;
+    --ink: #eef2eb;
+    --muted: #b0bbaf;
+    --accent: #c7dfb8;
+    --accent-hover: #d9edce;
+    --accent-soft: #2c3d2e;
+    --on-accent: #19271b;
+    --line: #354236;
+    --tag: #c3dcae;
+    --tag-bg: #2e3d27;
+    --spicy: #ffc1a5;
+    --spicy-bg: #4b3025;
+    --hero: #222d22;
+    --shadow: 0 4px 10px #0001,0 12px 32px #0002;
+    --drawer-shadow: -10px 0 70px #0005;
+  }
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+  /* Keep the page width steady when the order drawer locks scrolling. */
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+button {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  color: inherit;
+  transition: background 0.18s,transform 0.18s,border-color 0.18s,box-shadow 0.18s;
+}
+
+input {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+select {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.55;
+  transform: none;
+}
+
+svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 400;
+}
+
+h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 400;
+}
+
+h3 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+input:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+select:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  left: 16px;
+  top: -80px;
+  z-index: 100;
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: var(--space-3) 20px;
+  border-radius: 8px;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
